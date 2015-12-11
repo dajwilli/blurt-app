@@ -1,14 +1,14 @@
 @Blurt = React.createClass
   getInitialState: ->
-    blurt: @props
+    blurt: @props.blurt
   handleDelete: (e) ->
     e.preventDefault()
     $.ajax
       method: 'DELETE'
-      url: "/blurts/#{ @props.id }"
+      url: "/blurts/#{ @props.blurt.id }"
       dataType: 'JSON'
       success: () =>
-        @props.handleDeleteBlurt @props
+        @props.handleDeleteBlurt @props.blurt
 
   render: ->
     <div className="event" >

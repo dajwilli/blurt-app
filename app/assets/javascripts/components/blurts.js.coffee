@@ -11,7 +11,7 @@
 
   render: ->
     list = @state.blurts.map((blurtProps) =>
-        return <Blurt key={blurtProps.id} {...blurtProps} handleDeleteBlurt={@deleteBlurt}/>
+        return <Blurt key={blurtProps.id} blurt={blurtProps} handleDeleteBlurt={@deleteBlurt}/>
       )
     <div>
       <h1>Blurts</h1>
