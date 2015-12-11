@@ -1,0 +1,2 @@
+module BlurtsHelper
+end

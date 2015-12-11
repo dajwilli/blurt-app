@@ -1,0 +1,2 @@
+class BlurtsController < ApplicationController
+end
