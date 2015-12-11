@@ -13,4 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
 @import "semantic-ui";
+
+.delete.blurt {
+  display: none;
+}
+
+.ui.large.feed {
+  text-align: center;
+}
+
+.feed {
+  margin-bottom: 20px;
+  margin-top: 50px;
+  .event:hover {
+    padding: 6px;
+    .delete.blurt {
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+}
+
+.button#post {
+  box-shadow: 0 4px 0 0 #256398;
+}
