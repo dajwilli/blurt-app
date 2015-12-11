@@ -1,6 +1,14 @@
 @Blurt = React.createClass
   getInitialState: ->
     blurt: @props
+  handleDelete: (e) ->
+    e.preventDefault()
+    $.ajax
+      method: 'DELETE'
+      url: "/blurts/#{ @props.id }"
+      dataType: 'JSON'
+      success: () =>
+        @props.handleDeleteBlurt @props
 
   render: ->
     <div className="event" >
@@ -11,5 +19,5 @@
           </a> {@state.blurt.message}
         </div>
       </div>
-      <i className="remove icon right floated delete blurt"></i>
+      <i className="remove icon right floated delete blurt" onClick={@handleDelete}></i>
     </div>

@@ -13,6 +13,12 @@ class BlurtsController < ApplicationController
     end
   end
 
+  def destroy
+    @blurt = Blurt.find(params[:id])
+    @blurt.destroy
+    head :no_content
+  end
+
   private
   def blurt_params
     params.require(:blurt).permit(:message)
