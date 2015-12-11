@@ -22,6 +22,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem "haml-rails"
 gem 'react-rails', '~> 1.0'
 gem 'sprockets-coffee-react'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
