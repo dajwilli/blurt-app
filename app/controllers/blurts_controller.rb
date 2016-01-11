@@ -19,6 +19,21 @@ class BlurtsController < ApplicationController
     head :no_content
   end
 
+  def likes
+    @likes = BlurtLike.where(blurt_id: params[:id])
+    render json: @likes
+  end
+
+  def like_blurt
+    @blurt_like = BlurtLike.new(blurt_id: params[:id])
+      if @blurt_like.save
+        render json: @blurt_like
+      else
+        render json: @blurt_like.errors, status: :unprocessable_entity
+      end
+      puts @blurt_like.errors
+  end
+
   private
   def blurt_params
     params.require(:blurt).permit(:message)

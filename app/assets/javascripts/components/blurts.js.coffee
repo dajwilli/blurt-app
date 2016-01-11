@@ -11,10 +11,10 @@
 
   render: ->
     list = @state.blurts.map((blurtProps) =>
-        return <Blurt key={blurtProps.id} blurt={blurtProps} handleDeleteBlurt={@deleteBlurt}/>
-      )
+      return <Blurt key={blurtProps.id} blurt={blurtProps} handleDeleteBlurt={@deleteBlurt}/>
+    )
     <div>
-      <h1>Blurts</h1>
+      <h1 className="ui header">Blurts</h1>
       <div className="ui large feed">
         {list}
       </div>

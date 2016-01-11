@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
+//= require react-intl
 //= require components
 //= require_tree .

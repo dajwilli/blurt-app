@@ -24,6 +24,10 @@
   text-align: center;
 }
 
+.like.icon.selected {
+  color: red;
+}
+
 .feed {
   margin-bottom: 20px;
   margin-top: 50px;
@@ -34,6 +38,13 @@
       cursor: pointer;
     }
   }
+}
+
+.ui.reply.form {
+  // height: 20vh;
+  // position: fixed;
+  // bottom: 20px;
+  // width: inherit;
 }
 
 .button#post {
